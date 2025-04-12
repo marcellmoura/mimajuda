@@ -1,6 +1,6 @@
-# Modelo Conceitual – Sistema MimAjuda 💸
+# Modelo Conceitual – Sistema MimAjuda
 
-![Diagrama Entidade-Relacionamento (DER) do sistema MimAjuda](docs/banco/der_mimajuda.png)
+![Diagrama Entidade-Relacionamento (DER) do sistema MimAjuda](der_mimajuda.png)
 
 ---
 
