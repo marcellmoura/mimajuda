@@ -40,11 +40,11 @@ O MimAjuda tem como proposta oferecer um ambiente onde o usuário possa registra
 
 ## Tecnologias utilizadas
 
-- HTML, CSS e JavaScript (para interface)
+- HTML, CSS e JavaScript (para desenvolvimento da interface)
 - MySQL (modelagem e persistência de dados)
-- Git e GitHub (versionamento e documentação)
+- Git e GitHub (controle de versão e documentação)
 - Figma (prototipação das telas)
-- Markdown (documentação)
+- Markdown (documentação técnica)
 
 ---
 
@@ -61,5 +61,9 @@ mimajuda/
 │       ├── modelo_conceitual.md
 │       ├── modelo_logico.md
 │       └── der_mimajuda.png
-├── src/                  # Código-fonte do sistema (a ser desenvolvido)
+├── src/
+│   ├── index.html         # Página inicial (login)
+│   ├── style.css          # Estilos da interface
+│   ├── script.js          # Comportamento da interface
+│   └── logo.png           # Logotipo do sistema
 ├── README.md
