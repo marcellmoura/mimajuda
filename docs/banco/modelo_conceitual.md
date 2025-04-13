@@ -1,6 +1,6 @@
 # Modelo Conceitual – Sistema MimAjuda
 
-![Diagrama Entidade-Relacionamento (DER) do sistema MimAjuda](der_mimajuda.png)
+![Diagrama Entidade-Relacionamento (DER) do sistema MimAjuda](../img/der_mimajuda.png)
 
 ---
 
