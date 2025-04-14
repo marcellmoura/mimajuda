@@ -14,37 +14,39 @@ O MimAjuda tem como proposta oferecer um ambiente onde o usuário possa registra
 
 ### Funcionalidades essenciais (MVP)
 
-- Cadastro de usuário e login
-- Cadastro, edição e exclusão de categorias
-- Registro de receitas e despesas
-- Filtros por tipo, data e categoria
-- Cálculo automático de saldo
-- Resumo mensal de receitas e despesas
-- Comparativo com o mês anterior
+- Tela de login funcional com validação de campos
+- Dashboard com:
+  - Cards de saldo, receita e despesa
+  - Tabela de transações fictícias com estilo visual
+- Design estruturado conforme protótipo do Figma
+- Separação por cores de acordo com o tipo (receita/despesa)
 
-### Funcionalidades adicionais
+### Funcionalidades adicionais implementadas
 
-- Gráficos (pizza e linha)
-- Alertas de gasto excessivo
-- Validação de formulários
-- Responsividade para dispositivos móveis
+- Responsividade inicial
+- Organização modular do projeto (HTML, CSS e JS separados)
+- Estrutura de navegação lateral
+- Simulação de login com usuário fixo em JavaScript
 
-### Funcionalidades futuras
+### Funcionalidades previstas (a implementar)
 
-- Metas de economia por categoria
-- Notificações por e-mail
-- Simulações financeiras
-- Múltiplos perfis por usuário
+- Cadastro real de usuários
+- Registro dinâmico de transações
+- Edição e exclusão de registros
+- Filtros por tipo, categoria e data
+- Relatórios com gráficos
+- Sistema de metas e alertas
+- Integração com banco de dados
 
 ---
 
 ## Tecnologias utilizadas
 
-- HTML, CSS e JavaScript (para desenvolvimento da interface)
-- MySQL (modelagem e persistência de dados)
-- Git e GitHub (controle de versão e documentação)
-- Figma (prototipação das telas)
-- Markdown (documentação técnica)
+- HTML5, CSS3 e JavaScript
+- MySQL (modelagem de dados)
+- Git e GitHub (controle de versão)
+- Figma (prototipação visual)
+- Markdown (documentação)
 
 ---
 
@@ -52,7 +54,7 @@ O MimAjuda tem como proposta oferecer um ambiente onde o usuário possa registra
 
 ```txt
 mimajuda/
-├── docs/
+├── docs/                         # Documentação geral
 │   ├── descricao.md
 │   ├── funcionalidades.md
 │   ├── fluxo.md
@@ -61,9 +63,10 @@ mimajuda/
 │       ├── modelo_conceitual.md
 │       ├── modelo_logico.md
 │       └── der_mimajuda.png
-├── src/
-│   ├── index.html         # Página inicial (login)
-│   ├── style.css          # Estilos da interface
-│   ├── script.js          # Comportamento da interface
-│   └── logo.png           # Logotipo do sistema
-├── README.md
+├── src/                          # Código-fonte do frontend
+│   ├── index.html                # Tela de login
+│   ├── dashboard.html            # Painel de controle
+│   ├── style.css                 # Estilos globais
+│   ├── script.js                 # Validação de login
+│   └── logo.png                  # Logo do sistema
+├── README.md                     # Documento principal

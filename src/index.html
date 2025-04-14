@@ -12,12 +12,18 @@
   <div class="login-container">
     <div class="login-card">
       <img src=logo.png alt="Logo MimAjuda" class="login-logo">
+
       <label for="email" class="login-label">E-mail</label>
       <input type="email" id="email" class="login-input" placeholder="Digite seu e-mail" />
+
       <label for="senha" class="login-label">Senha</label>
       <input type="password" id="senha" class="login-input" placeholder="Digite sua senha" />
-      <button class="login-button">Entrar</button>
+
+      <button class="login-button" onclick="fazerLogin()">Entrar</button>
+
       <p class="login-footer">Esqueci minha senha?</p>
+
+      <p id="mensagem-erro" class="login-erro"></p>
     </div>
   </div>
 

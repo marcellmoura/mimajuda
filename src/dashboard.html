@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - MimAjuda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <aside class="sidebar">
+      <!-- Sidebar -->
+      <h2 class="logo-text">MimAjuda</h2>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="#">Transações</a></li>
+          <li><a href="#">Relatórios</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+      <button class="logout-button">Sair</button>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <!-- Header virá aqui depois -->
+      <div class="dashboard-header">
+        <h1>Painel de Controle</h1>
+      </div>
+
+      <!-- Cards de Saldo -->
+      <div class="dashboard-cards">
+        <div class="card card-saldo">
+          <p class="card-label">Saldo Atual</p>
+          <p class="card-valor">R$ 2.400,00</p>
+        </div>
+        <div class="card card-receita">
+          <p class="card-label">Receitas</p>
+          <p class="card-valor">R$ 1.600,00</p>
+        </div>
+        <div class="card card-despesa">
+          <p class="card-label">Despesas</p>
+          <p class="card-valor">R$ 800,00</p>
+        </div>
+      </div>
+
+      <!-- Bloco da tabela de transações -->
+      <div class="tabela-transacoes">
+        <div class="tabela-header">
+          <span>Data</span>
+          <span>Descrição</span>
+          <span>Categoria</span>
+          <span>Tipo</span>
+          <span>Valor</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>08/04/2025</span>
+          <span>Mercado</span>
+          <span>Alimentação</span>
+          <span class="despesa">Despesa</span>
+          <span>R$ 150,00</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>06/04/2025</span>
+          <span>Freelancer</span>
+          <span>Renda Extra</span>
+          <span class="receita">Receita</span>
+          <span>R$ 900,00</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>03/04/2025</span>
+          <span>Uber</span>
+          <span>Transporte</span>
+          <span class="despesa">Despesa</span>
+          <span>R$ 45,00</span>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

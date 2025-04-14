@@ -84,3 +84,173 @@ body {
   color: #666666;
   margin-top: 16px;
 }
+
+/* === Estrutura geral do Dashboard === */
+
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* === Sidebar === */
+
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0057b8;
+  margin-bottom: 32px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 16px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+}
+
+.sidebar-nav a.active {
+  font-weight: bold;
+  color: #0057b8;
+}
+
+.logout-button {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+/* === Área principal === */
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  background-color: #f5f5f5;
+}
+
+/* === Cabeçalho do Contéudo === */
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* ===================== */
+/* ===== DASHBOARD ===== */
+/* ===================== */
+
+/* Container dos cards */
+.dashboard-cards {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+/* Estilo comum dos cards */
+.card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Label (parte de cima do card) */
+.card-label {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+/* Valor (parte de baixo do card) */
+.card-valor {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================== */
+/* ===== TABELA DE DADOS ===== */
+/* =========================== */
+
+.tabela-transacoes {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tabela-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+  color: #444444;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.tabela-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tabela-linha span {
+  width: 20%;
+  color: #333333;
+}
+
+.tabela-linha .receita {
+  color: #009900;
+  font-weight: 500;
+}
+
+.tabela-linha .despesa {
+  color: #cc0000;
+  font-weight: 500;
+}
+
+/* Cores específicas por tipo */
+.card-saldo .card-valor {
+  color: #333333;
+}
+
+.card-receita .card-valor {
+  color: #009900;
+}
+
+.card-despesa .card-valor {
+  color: #cc0000;
+}
