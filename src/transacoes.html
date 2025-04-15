@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transações - MimAjuda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <aside class="sidebar">
+      <!-- Sidebar -->
+      <h2 class="logo-text">MimAjuda</h2>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#" class="active">Transações</a></li>
+          <li><a href="#">Relatórios</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+      <button class="logout-button">Sair</button>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <!-- Header virá aqui depois -->
+      <div class="dashboard-header">
+        <h1>Transações</h1>
+      </div>
+
+      <div class="linha-topo">
+        <button id="abrirFormulario" class="botao-nova-transacao">+ Nova Transação</button>
+      </div>
+
+      <!-- Bloco da tabela de transações -->
+      <div class="tabela-transacoes">
+        <div class="tabela-header">
+          <span>Data</span>
+          <span>Descrição</span>
+          <span>Categoria</span>
+          <span>Tipo</span>
+          <span>Valor</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>08/04/2025</span>
+          <span>Mercado</span>
+          <span>Alimentação</span>
+          <span class="despesa">Despesa</span>
+          <span>R$ 150,00</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>06/04/2025</span>
+          <span>Freelancer</span>
+          <span>Renda Extra</span>
+          <span class="receita">Receita</span>
+          <span>R$ 900,00</span>
+        </div>
+
+        <div class="tabela-linha">
+          <span>03/04/2025</span>
+          <span>Uber</span>
+          <span>Transporte</span>
+          <span class="despesa">Despesa</span>
+          <span>R$ 45,00</span>
+        </div>
+      </div>
+
+      <div id="formularioTransacao" class="formulario-transacao" style="display: none;">
+        <div class="form-linha">
+          <div class="form-campo">
+            <label for="data">Data</label>
+            <input type="date" id="data">
+          </div>
+
+          <div class="form-campo">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Ex: Uber, Salário...">
+          </div>
+        </div>
+
+        <div class="form-linha">
+          <div class="form-campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+              <option>Alimentação</option>
+              <option>Transporte</option>
+              <option>Renda Extra</option>
+              <!-- mais opções depois -->
+            </select>
+          </div>
+
+          <div class="form-campo">
+            <label>Tipo</label>
+            <div class="tipo-botoes">
+              <button class="botao-tipo ativo" data-tipo="receita">Receita</button>
+              <button class="botao-tipo" data-tipo="despesa">Despesa</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-linha">
+          <div class="form-campo">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="R$ 0,00">
+          </div>
+        </div>
+
+        <div class="form-botoes">
+          <button id="cancelarFormulario" class="cancelar">Cancelar</button>
+          <button id="salvarTransacao" class="salvar">Salvar</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

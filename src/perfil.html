@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - MimAjuda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <aside class="sidebar">
+      <h2 class="logo-text">MimAjuda</h2>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="transacoes.html">Transações</a></li>
+          <li><a href="relatorios.html">Relatórios</a></li>
+          <li><a href="#" class="active">Perfil</a></li>
+        </ul>
+      </nav>
+      <button class="logout-button">Sair</button>
+    </aside>
+
+    <main class="main-content">
+      <div class="dashboard-header">
+        <h1>Meu Perfil</h1>
+      </div>
+
+      <!-- Bloco com informações do usuário -->
+      <div id="perfilInfo" class="perfil-card">
+        <p><strong>Nome:</strong> Marcell Moura</p>
+        <p><strong>E-mail:</strong> marcell@email.com</p>
+        <button id="abrirAlterarSenha" class="botao-alterar-senha">Alterar Senha</button>
+      </div>
+
+      <!-- Formulário de alteração de senha (inicialmente oculto) -->
+      <div id="formAlterarSenha" class="formulario-transacao" style="display: none; max-width: 400px;">
+        <div class="form-campo">
+          <label for="senha-atual">Senha Atual</label>
+          <input type="password" id="senha-atual" placeholder="Digite sua senha atual">
+        </div>
+
+        <div class="form-campo">
+          <label for="nova-senha">Nova Senha</label>
+          <input type="password" id="nova-senha" placeholder="Digite a nova senha">
+        </div>
+
+        <div class="form-campo">
+          <label for="confirmar-senha">Confirmar Nova Senha</label>
+          <input type="password" id="confirmar-senha" placeholder="Confirme a nova senha">
+        </div>
+
+        <div class="form-botoes">
+          <button id="cancelarAlterarSenha" class="cancelar">Cancelar</button>
+          <button class="salvar">Salvar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const perfilInfo = document.getElementById("perfilInfo");
+    const formAlterarSenha = document.getElementById("formAlterarSenha");
+    const abrirAlterarSenha = document.getElementById("abrirAlterarSenha");
+    const cancelarAlterarSenha = document.getElementById("cancelarAlterarSenha");
+
+    abrirAlterarSenha.addEventListener("click", () => {
+      perfilInfo.style.display = "none";
+      formAlterarSenha.style.display = "flex";
+    });
+
+    cancelarAlterarSenha.addEventListener("click", () => {
+      formAlterarSenha.style.display = "none";
+      perfilInfo.style.display = "flex";
+    });
+  </script>
+</body>
+
+</html>
