@@ -9,10 +9,9 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* === Container principal do login === */
@@ -71,7 +70,7 @@ body {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0, 3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
@@ -86,14 +85,12 @@ body {
 }
 
 /* === Estrutura geral do Dashboard === */
-
 .dashboard-layout {
   display: flex;
   height: 100vh;
 }
 
 /* === Sidebar === */
-
 .sidebar {
   width: 220px;
   background-color: #ffffff;
@@ -104,11 +101,11 @@ body {
   justify-content: space-between;
 }
 
-.logo-text {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0057b8;
-  margin-bottom: 32px;
+.sidebar-logo {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 32px auto;
 }
 
 .sidebar-nav ul {
@@ -143,15 +140,40 @@ body {
 }
 
 /* === Área principal === */
-
 .main-content {
   flex: 1;
   padding: 32px;
   background-color: #f5f5f5;
 }
 
-/* === Cabeçalho do Contéudo === */
+/* === Header da área principal === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: -32px -32px 32px -32px;
+}
 
+.header-bemvindo h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.header-bemvindo p {
+  font-size: 14px;
+  color: #777;
+}
+
+.header-logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* === Cabeçalho do conteúdo === */
 .dashboard-header {
   margin-bottom: 24px;
 }
@@ -161,18 +183,13 @@ body {
   color: #333;
 }
 
-/* ===================== */
-/* ===== DASHBOARD ===== */
-/* ===================== */
-
-/* Container dos cards */
+/* === Cards do Dashboard === */
 .dashboard-cards {
   display: flex;
   gap: 16px;
   margin: 24px 0;
 }
 
-/* Estilo comum dos cards */
 .card {
   flex: 1;
   background-color: #ffffff;
@@ -181,68 +198,18 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Label (parte de cima do card) */
 .card-label {
   font-size: 14px;
   color: #666666;
   margin-bottom: 8px;
 }
 
-/* Valor (parte de baixo do card) */
 .card-valor {
   font-size: 20px;
   font-weight: bold;
 }
 
-/* =========================== */
-/* ===== TABELA DE DADOS ===== */
-/* =========================== */
-
-.tabela-transacoes {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  margin-top: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.tabela-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 14px;
-  color: #444444;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 8px;
-}
-
-.tabela-linha {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.tabela-linha span {
-  width: 20%;
-  color: #333333;
-}
-
-.tabela-linha .receita {
-  color: #009900;
-  font-weight: 500;
-}
-
-.tabela-linha .despesa {
-  color: #cc0000;
-  font-weight: 500;
-}
-
-/* Cores específicas por tipo */
+/* === Cores dos cards por tipo === */
 .card-saldo .card-valor {
   color: #333333;
 }
@@ -255,14 +222,79 @@ body {
   color: #cc0000;
 }
 
-/* Linha superior com botão */
+/* === Tabela de transações === */
+.tabela-transacoes {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tabela-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.tabela-transacoes {
+  min-width: 600px;
+  /* largura mínima para manter a leitura */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tabela-header,
+.tabela-linha {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 100px 100px;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.tabela-header {
+  font-weight: bold;
+  font-size: 14px;
+  color: #444444;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela-linha {
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tabela-linha span,
+.tabela-header span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.tabela-linha .receita {
+  color: #009900;
+  font-weight: 500;
+}
+
+.tabela-linha .despesa {
+  color: #cc0000;
+  font-weight: 500;
+}
+
+/* === Botão Nova Transação === */
 .linha-topo {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
 }
 
-/* Botão nova transação */
 .botao-nova-transacao {
   background-color: #0057b8;
   color: white;
@@ -279,10 +311,7 @@ body {
   background-color: #004a9a;
 }
 
-/* ================================ */
-/* ===== FORMULÁRIO TRANSAÇÃO ==== */
-/* ================================ */
-
+/* === Formulário de transação === */
 .formulario-transacao {
   background-color: #ffffff;
   padding: 24px;
@@ -369,6 +398,7 @@ body {
   cursor: pointer;
 }
 
+/* === Relatórios (gráficos) === */
 .relatorios-graficos {
   display: flex;
   gap: 24px;
@@ -402,6 +432,7 @@ body {
   color: #777;
 }
 
+/* === Perfil === */
 .perfil-card {
   background-color: #ffffff;
   padding: 24px;

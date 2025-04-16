@@ -12,8 +12,10 @@
   <div class="dashboard-layout">
 
     <aside class="sidebar">
-      <!-- Sidebar -->
-      <h2 class="logo-text">MimAjuda</h2>
+      <!-- Sidebar com logo centralizado -->
+      <div class="logo-container">
+        <img src="logoSemNome.png" alt="Logo MimAjuda" class="sidebar-logo">
+      </div>
       <nav class="sidebar-nav">
         <ul>
           <li><a href="#" class="active">Dashboard</a></li>
@@ -27,61 +29,67 @@
 
     <!-- Conteúdo Principal -->
     <main class="main-content">
-      <!-- Header virá aqui depois -->
+      <header class="main-header">
+        <div class="header-bemvindo">
+          <h2>Olá, Marcell!</h2>
+          <p>Seja bem-vindo de volta</p>
+        </div>
+        <img src="logoSemNome.png" alt="Logo MimAjuda" class="header-logo">
+      </header>
       <div class="dashboard-header">
         <h1>Painel de Controle</h1>
-      </div>
 
-      <!-- Cards de Saldo -->
-      <div class="dashboard-cards">
-        <div class="card card-saldo">
-          <p class="card-label">Saldo Atual</p>
-          <p class="card-valor">R$ 2.400,00</p>
-        </div>
-        <div class="card card-receita">
-          <p class="card-label">Receitas</p>
-          <p class="card-valor">R$ 1.600,00</p>
-        </div>
-        <div class="card card-despesa">
-          <p class="card-label">Despesas</p>
-          <p class="card-valor">R$ 800,00</p>
-        </div>
-      </div>
-
-      <!-- Bloco da tabela de transações -->
-      <div class="tabela-transacoes">
-        <div class="tabela-header">
-          <span>Data</span>
-          <span>Descrição</span>
-          <span>Categoria</span>
-          <span>Tipo</span>
-          <span>Valor</span>
+        <!-- Cards de Saldo -->
+        <div class="dashboard-cards">
+          <div class="card card-saldo">
+            <p class="card-label">Saldo Atual</p>
+            <p class="card-valor">R$ 2.400,00</p>
+          </div>
+          <div class="card card-receita">
+            <p class="card-label">Receitas</p>
+            <p class="card-valor">R$ 1.600,00</p>
+          </div>
+          <div class="card card-despesa">
+            <p class="card-label">Despesas</p>
+            <p class="card-valor">R$ 800,00</p>
+          </div>
         </div>
 
-        <div class="tabela-linha">
-          <span>08/04/2025</span>
-          <span>Mercado</span>
-          <span>Alimentação</span>
-          <span class="despesa">Despesa</span>
-          <span>R$ 150,00</span>
-        </div>
+        <!-- Bloco da tabela de transações -->
+        <div class="tabela-container">
+          <div class="tabela-transacoes">
+            <div class="tabela-header">
+              <span>Data</span>
+              <span>Descrição</span>
+              <span>Categoria</span>
+              <span>Tipo</span>
+              <span>Valor</span>
+            </div>
 
-        <div class="tabela-linha">
-          <span>06/04/2025</span>
-          <span>Freelancer</span>
-          <span>Renda Extra</span>
-          <span class="receita">Receita</span>
-          <span>R$ 900,00</span>
-        </div>
+            <div class="tabela-linha">
+              <span>08/04/2025</span>
+              <span>Mercado</span>
+              <span>Alimentação</span>
+              <span class="despesa">Despesa</span>
+              <span>R$ 150,00</span>
+            </div>
 
-        <div class="tabela-linha">
-          <span>03/04/2025</span>
-          <span>Uber</span>
-          <span>Transporte</span>
-          <span class="despesa">Despesa</span>
-          <span>R$ 45,00</span>
-        </div>
-      </div>
+            <div class="tabela-linha">
+              <span>06/04/2025</span>
+              <span>Freelancer</span>
+              <span>Renda Extra</span>
+              <span class="receita">Receita</span>
+              <span>R$ 900,00</span>
+            </div>
+
+            <div class="tabela-linha">
+              <span>03/04/2025</span>
+              <span>Uber</span>
+              <span>Transporte</span>
+              <span class="despesa">Despesa</span>
+              <span>R$ 45,00</span>
+            </div>
+          </div>
 
     </main>
   </div>
